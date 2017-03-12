@@ -1,0 +1,32 @@
+<div class="row">
+  <app-header></app-header>
+</div>
+
+<div class="container">
+  <div class="row">
+    <input type="text" #input1 (keyup)="0" />
+
+  </div>
+  <div class="row">
+    <table class="table">
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let item of allTask | filter: input1.value ">
+        <td>{{item.Id }}</td>
+        <td>{{item.Title }}</td>
+        <td><span [ngClass]="{'donestatus': item.Status=='done','pendingstatus': item.Status=='pending'}"> {{item.Status}} </span></td>
+        <td>
+          <button (click)='deleteTask(item)' type="button" class="btn btn-default" aria-label="Left Align">
+ 
+<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+ 
+</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
