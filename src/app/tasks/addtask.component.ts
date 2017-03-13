@@ -19,7 +19,7 @@ status:string[]=[
 taskSubmit(){
   this._data.addTask(this.model).subscribe(
     (data:any)=>{
-
+      alert("hello");
       this._route.navigate(['allTask']);
     }
   );
