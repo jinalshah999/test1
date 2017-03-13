@@ -8,9 +8,5 @@ module.exports = {
   ],
   root: 'dist',
   stripPrefix: 'dist/',
-  navigateFallback: '/index.html',
-  runtimeCaching: [{
-    urlPattern: /rkdemotask\.herokuapp\.com\/Tasks/,
-    handler: 'networkFirst'
-  }]
+  navigateFallback: '/index.html'
 };
